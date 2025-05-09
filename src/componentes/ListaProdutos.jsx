@@ -27,21 +27,18 @@ function ListaProdutos() {
         </Col>
       </Row>
       <Row>
-
-        {produtos.map((item)=>{
+        {produtos.map((item) => {
           return (
-           <Col md={3}>
-             <CardProduto
-            nome={item.title}
-            preco={item.price}
-            linkImagem={item.image}
-            descricao={item.category}
-            />
-           </Col>
-          )
+            <Col md={3}>
+              <CardProduto
+                nome={item.title}
+                preco={item.price}
+                linkImagem={item.image}
+                descricao={item.category}
+              />
+            </Col>
+          );
         })}
-        
-        
       </Row>
     </>
   );
