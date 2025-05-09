@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import api from "../_service/api";
+import { CardProduto } from "./CardProduto";
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState([]);
@@ -18,8 +19,6 @@ function ListaProdutos() {
     }
   }
 
-  
-
   return (
     <>
       <Row className="justify-content-md-center">
@@ -28,6 +27,19 @@ function ListaProdutos() {
         </Col>
       </Row>
       <Row>
+
+        {produtos.map((item)=>{
+          return (
+           <Col md={3}>
+             <CardProduto
+            nome={item.title}
+            preco={item.price}
+            linkImagem={item.image}
+            descricao={item.category}
+            />
+           </Col>
+          )
+        })}
         
         
       </Row>

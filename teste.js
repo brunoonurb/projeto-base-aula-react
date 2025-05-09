@@ -1,20 +1,35 @@
-async function buscaDados() {
-  const responsen = await fetch(
-    "http://webapp353621.ip-45-79-142-173.cloudezapp.io/apei/productlistbyremark/home"
-  );
-  return await responsen.json();
-}
 
-function execute() {
-  try {
-    const resultado = buscaDados();
-    console.log("REULTA ", resultado);
-  } catch (error) {
-    console.log("ERRO ", error);
-  }
-}
+const array = [1,2,3,4,5,{nome:'joao'}]
 
-execute();
+const resultado = array.map((item)=> {
+  console.log(item);
+}  )
+
+
+
+
+// console.log(array[5], array[0]);
+
+
+
+
+// async function buscaDados() {
+//   const responsen = await fetch(
+//     "http://webapp353621.ip-45-79-142-173.cloudezapp.io/apei/productlistbyremark/home"
+//   );
+//   return await responsen.json();
+// }
+
+// function execute() {
+//   try {
+//     const resultado = buscaDados();
+//     console.log("REULTA ", resultado);
+//   } catch (error) {
+//     console.log("ERRO ", error);
+//   }
+// }
+
+// execute();
 // const nossoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // function retornaArray(){
