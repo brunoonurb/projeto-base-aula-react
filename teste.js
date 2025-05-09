@@ -1,22 +1,31 @@
+async function buscaDados() {
+  const responsen= await fetch("http://webapp353621.ip-45-79-142-173.cloudezapp.io/apei/productlistbyremark/home")
+return await responsen.json()
+}
+ 
+ function execute(){
 
+  try {
+    const resultado =   buscaDados()
+    console.log("REULTA ",resultado);
 
+  } catch (error) {
+    console.log('ERRO ',error);
+  }
 
-
-
-
-
-const nossoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-function retornaArray(){
-  return [1, 2, 3, 4, 5, 6, 7, 8, 9]
 }
 
-const [_,__,___,____,abc5 ] = retornaArray()
 
+execute()
+// const nossoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(abc5);
+// function retornaArray(){
+//   return [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// }
 
+// const [_,__,___,____,abc5 ] = retornaArray()
 
+// console.log(abc5);
 
 // const [_, __,___, posicao3, posicao4] = nossoArray;
 
@@ -81,10 +90,8 @@ console.log(abc5);
 
 // console.log("objetoPessoaNovo", objetoPessoaNovo);
 
-
 // useCallback
 // function soma1(num1, num2,num3, calback) {
-
 
 //   return setTimeout(() => {
 //     console.log("SOMA 1");
@@ -107,7 +114,6 @@ console.log(abc5);
 
 // const resultado1 = soma1(1, 2, 3 ,soma2)
 
-
 // // calback
 // function soma1(num1, num2, calback) {
 //   console.log('SOMA');
@@ -117,10 +123,7 @@ console.log(abc5);
 //   return calback(result, 5);
 // }
 
-
 // const resultado1 = soma1(1, 2);
-
-
 
 // const resultfinal = soma1(1, 2, (res, nume) => {
 

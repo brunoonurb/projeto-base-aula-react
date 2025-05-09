@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import { toast } from "react-toastify";
 import api from "../_service/api";
-import { CardProduto } from "./CardProduto";
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState([]);
