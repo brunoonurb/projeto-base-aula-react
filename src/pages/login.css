@@ -1,0 +1,64 @@
+.divLogin {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.containerLogin {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px; /* Aumentado de 400px para 600px */
+  box-sizing: border-box;
+}
+
+.div-input {
+  margin-bottom: 2rem;
+}
+
+.div-input label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #555;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.div-input input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #4338ca;
+}
