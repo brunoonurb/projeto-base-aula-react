@@ -15,8 +15,8 @@ function NavBar(props) {
           </Nav>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              <GerenciarLoginInicial />
-              {/* <GerenciarLogin /> */}
+              {/* <GerenciarLoginInicial /> */}
+              <GerenciarLogin />
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

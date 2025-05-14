@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
+import { CarrinhoContext } from "../hooks/CarrinhoContext";
 
 function CardProduto({ idProduto, nome, preco, descricao, linkImagem }) {
-
+  const { adicionarCarrinho } = useContext(CarrinhoContext);
 
   function adicionarNoCarrinho(
     idProduto,
@@ -10,7 +12,13 @@ function CardProduto({ idProduto, nome, preco, descricao, linkImagem }) {
     descricaoProduto,
     linkImagemProduto
   ) {
-   alert("adiconado com sucesso")
+    adicionarCarrinho({
+      idProduto,
+      nomeProduto,
+      precoProduto,
+      descricaoProduto,
+      linkImagemProduto,
+    });
   }
 
   return (

@@ -31,6 +31,7 @@ function ListaProdutos() {
           return (
             <Col md={3}>
               <CardProduto
+               idProduto={item.id}
                 nome={item.title}
                 preco={item.price}
                 linkImagem={item.image}
