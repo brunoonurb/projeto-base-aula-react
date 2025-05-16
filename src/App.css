@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.temadark{
+  background-color: black;
+  color: white;
+}
+.temalight{
+  background-color: rgb(238, 232, 232);
+  color: black;
+}
+.temablue{
+  background-color: blue;
+  color: white;
+}
+
 .teste {
   background-color: aqua;
   height: 300px;
