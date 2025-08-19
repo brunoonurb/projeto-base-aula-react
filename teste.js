@@ -1,9 +1,27 @@
 
-const array = [1,2,3,4,5,{nome:'joao'}]
 
-const resultado = array.map((item)=> {
-  console.log(item);
-}  )
+function some2numero(num1, num2, callback) {
+
+  const resultado = num1 + num2;
+
+  return callback(resultado, 5)
+}
+
+
+const resultado = some2numero(1, 2, (num1, num2)=> num1 + num2 );
+
+
+console.log(resultado);
+
+
+
+
+
+// const array = [1,2,3,4,5,{nome:'joao'}]
+
+// const resultado = array.map((item)=> {
+//   console.log(item);
+// }  )
 
 
 
