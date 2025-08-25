@@ -7,7 +7,7 @@ export function RouteApp() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/ " element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/login" element={<Login />} />
       </Routes>

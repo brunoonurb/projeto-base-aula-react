@@ -1,8 +1,12 @@
+import { use } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  let navegate = useNavigate()
 
   function PegarEmail(event) {
     setEmail(event.target.value);
@@ -21,8 +25,19 @@ function Login() {
           body: formData,
         }
       );
+
+      const data = await response.json();
+
+      console.log(data);
+      
+      localStorage.setItem("token",  data.token);
+      localStorage.setItem("nomeUsuario",  data.user.name);
+      localStorage.setItem("emailUsuario",  data.user.email);
+      
+      navegate("/")
+
     } catch (error) {
-      alert("Erro ao enviar dados");
+      alert("Erro ao fazer login");
       console.error(error);
     }
   }

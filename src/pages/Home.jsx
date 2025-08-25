@@ -1,8 +1,10 @@
+import { MeuNavBar } from "../componentes/MeuNavaBAr";
 
 function Home() {
   return (
-    <div className="App">
-      HOME EXEMPLO
+    <div>
+      <MeuNavBar />
+      <h1>Home</h1>
     </div>
   );
 }
