@@ -33,6 +33,8 @@ console.log(resultado);
 
 // async function buscaDados() {
 //   const responsen = await fetch(
+//
+
 //     "http://webapp353621.ip-45-79-142-173.cloudezapp.io/apei/productlistbyremark/home"
 //   );
 //   return await responsen.json();
