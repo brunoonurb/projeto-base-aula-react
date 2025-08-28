@@ -13,9 +13,9 @@ function AlterarValorContext() {
   }
   
   return (
-    <div>
+    <div className="bg-warning">
       <h1>Alterar Valor Context</h1>
-      <input type="number" onChange={alterarValor} />
+      <input type="number" placeholder="Digite um valor" onChange={alterarValor} />
     </div>
   );
 }

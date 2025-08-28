@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { TesteUseContext } from "../hooks/TesteUseContext";
 import { CarrinhoContext } from "../hooks/CarrinhoContext";
+import "./navBar.css";
 
 function MeuNavBar() {
   const [nome, setNome] = useState("");
@@ -11,6 +12,7 @@ function MeuNavBar() {
 
   const { teste } = useContext(TesteUseContext);
   const { listaProdutos } = useContext(CarrinhoContext);
+  
   function buscarDadosUsuario() {
     const nomeusuario = localStorage.getItem("nomeUsuario");
     const emailusuario = localStorage.getItem("emailUsuario");
@@ -34,45 +36,66 @@ function MeuNavBar() {
 
   if (!token) {
     return (
-      <div className="bg-white">
-        <ul>
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
-          <li>
-            <Link to="/produtos">PRODUTOS</Link>
-          </li>
-        </ul>
+      <div className="navbar-container">
+        <div className="navbar-content">
+          <Link to="/" className="navbar-brand">
+            SISTEMA
+          </Link>
+          
+          <nav>
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">HOME</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/produtos" className="nav-link">PRODUTOS</Link>
+              </li>
+            </ul>
+          </nav>
 
-        <Link to="/login">FAZER LOGIN</Link>
-        <hr />
+          <div className="navbar-actions">
+            <Link to="/login" className="btn-login">FAZER LOGIN</Link>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-white">
-      SISTEN
-      <ul>
-        <li>
-          <Link to="/">HOME</Link>
-        </li>
-        <li>
-          <Link to="/produtos">PRODUTOS</Link>
-        </li>
-        <li>
-          <Link to="/carrinho">CARRINHO</Link>
-        </li>
-        <li>
-          Quantidade de produtos no carrinho: {listaProdutos.length}
-        </li>
-        <li>
-          <b>Nome:</b> {nome} | <b>Email:</b> {email}
-        </li>
-        <li>QTD TESTES: {teste}</li>
-      </ul>
-      <Button onClick={sair}>SAIR</Button>
-      <hr />
+    <div className="navbar-container">
+      <div className="navbar-content">
+        <Link to="/" className="navbar-brand">
+          SISTEMA
+        </Link>
+        
+        <nav>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">HOME</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/produtos" className="nav-link">PRODUTOS</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/carrinho" className="nav-link">
+                CARRINHO
+                <span className="cart-count">{listaProdutos.length}</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <div className="nav-user-info">
+                <span><b>Nome:</b> {nome}</span>
+                <span><b>Email:</b> {email}</span>
+                <span>QTD TESTES: {teste}</span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="navbar-actions">
+          <button onClick={sair} className="btn-logout">SAIR</button>
+        </div>
+      </div>
     </div>
   );
 }
