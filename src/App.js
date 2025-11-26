@@ -1,19 +1,27 @@
 import "./App.css";
 
 import "font-awesome/css/font-awesome.css";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import CarrinhoContextProvider from "./hooks/CarrinhoContext";
-import { RouteApp } from "./route";
+import { PrimeiroComponente } from "./componentes/PrimeiroComponente";
 
 function App() {
   return (
-    <>
-    <CarrinhoContextProvider>
-      <ToastContainer />Ï
-      <RouteApp />
-      </CarrinhoContextProvider>
-    </>
+    <div className="App">
+      <PrimeiroComponente sobrenome="Pedroso" idade="20" />
+      <hr />
+      <PrimeiroComponente 
+        sobrenome="Silva" 
+        idade="30" 
+        altura="1.75"
+      >
+        Este é o conteúdo do props.children
+      </PrimeiroComponente>
+      <hr />
+      <PrimeiroComponente sobrenome="Oliveira">
+        esse ehsegundo conteúdo
+      </PrimeiroComponente>
+      Helo World!
+    </div>
   );
 }
 
