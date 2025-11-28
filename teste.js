@@ -1,21 +1,38 @@
-
-
-function some2numero(num1, num2, callback) {
-
-  const resultado = num1 + num2;
-
-  return callback(resultado, 5)
+function soma1(num1, num2, minhaFunt) {
+  const result = num1 + num2;
+  return minhaFunt();
 }
+const resultfinal = soma1(1, 2, function () {
+  return 400;
+});
 
+console.log("resultresultfinaladoSoma1", resultfinal);
 
-const resultado = some2numero(1, 2, (num1, num2)=> num1 + num2 );
+// import { use, useState } from "react";
 
+// const [idade, setIdade] = useState(0);
+// const pessoa = { nome: "bruno", idade: 31, apelido: "bru" };
 
-console.log(resultado);
+// const { idade, apelido } = pessoa;
 
+// console.log(apelido);
 
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+// const [num1, __, meuNumeroTRes, ___ ] = array;
 
+// console.log(meuNumeroTRes);
+
+// function some2numero(num1, num2, callback) {
+
+//   const resultado = num1 + num2;
+
+//   return callback(resultado, 5)
+// }
+
+// const resultado = some2numero(1, 2, (num1, num2)=> num1 + num2 );
+
+// console.log(resultado);
 
 // const array = [1,2,3,4,5,{nome:'joao'}]
 
@@ -23,13 +40,7 @@ console.log(resultado);
 //   console.log(item);
 // }  )
 
-
-
-
 // console.log(array[5], array[0]);
-
-
-
 
 // async function buscaDados() {
 //   const responsen = await fetch(
