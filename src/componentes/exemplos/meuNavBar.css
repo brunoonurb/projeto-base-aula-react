@@ -1,0 +1,7 @@
+
+  .contanierNavBar {
+    background-color: rgb(198, 180, 180);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
