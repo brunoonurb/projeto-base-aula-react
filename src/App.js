@@ -3,12 +3,12 @@ import "./App.css";
 import "font-awesome/css/font-awesome.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ComponenteExemplo } from "./componentes/ComponenteExemplo";
+import { RouteApp } from "./route";
 
 function App() {
   return (
     <div className="App">
-      <h1>APP</h1>
-      <ComponenteExemplo />
+      <RouteApp />
     </div>
   );
 }

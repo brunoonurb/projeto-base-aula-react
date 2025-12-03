@@ -1,6 +1,9 @@
+import { MeuNavBar } from "./MeuNavBar";
+
 function ComponenteExemplo(props) {
   return (
     <div className="minhaClasse">
+       <MeuNavBar />
       <h1>EXEMPLO</h1>
       <div>
         <p>Nome: {props.nome} </p>

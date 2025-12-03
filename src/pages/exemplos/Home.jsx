@@ -1,3 +1,4 @@
+import { ListaProdutos } from "../../componentes/exemplos/ListaProdutos";
 import { MeuNavBar } from "../componentes/MeuNavBar";
 
 function Home() {
@@ -5,7 +6,7 @@ function Home() {
     <div>
       <MeuNavBar />
 
-     
+      <ListaProdutos />
       <p>HOME</p>
     </div>
   );

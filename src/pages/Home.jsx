@@ -1,9 +1,11 @@
-
+import { ListaProdutos } from "../componentes/exemplos/ListaProdutos";
+import { MeuNavBar } from "../componentes/MeuNavBar";
 function Home() {
-
   return (
     <div>
-      <p>HOME</p>
+      <MeuNavBar />
+      <h1>HOME</h1>
+      <ListaProdutos />
     </div>
   );
 }
