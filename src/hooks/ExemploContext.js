@@ -3,10 +3,11 @@ import { createContext, useEffect, useState } from "react";
 export const ExemploContext = createContext();
 
 function ExemploContextProvider({ children }) {
-  const [varExemplo, setVarExemplo] = useState([]);
+  const [varExemplo, setVarExemplo] = useState('Exemplo o valor aqui');
 
-  function exemplo(idProduto) {
-    alert("exemplo");
+  function exemplo(valor) {
+    alert(valor);
+    setVarExemplo(valor)
   }
 
   return (

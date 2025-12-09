@@ -1,4 +1,5 @@
-import { use } from "react";
+import { use, useContext } from "react";
+import { ExemploContext } from "../hooks/ExemploContext";
 
 function GerenciarLogin() {
   const nome = localStorage.getItem("nomeUsuasrio");
@@ -12,10 +13,15 @@ function GerenciarLogin() {
     window.location.reload();
   }
 
+  const {exemplo} = useContext(ExemploContext)
+  
   if (!token) {
     return (
       <div>
         <a href="/login">
+
+        <button onClick={()=> exemplo('no login')}>click aqui</button>
+
           <button>LOGIN</button>
         </a>
       </div>
