@@ -1,17 +1,71 @@
 
 
-function some2numero(num1, num2, callback) {
 
-  const resultado = num1 + num2;
+var num1 =10 
+var num2 =5 
+var num3 =10
 
-  return callback(resultado, 5)
+
+function soma(num1, num2){
+
+  return num1 + num2
 }
+var result = soma(num1, num2)
 
 
-const resultado = some2numero(1, 2, (num1, num2)=> num1 + num2 );
+console.log(result);
 
 
-console.log(resultado);
+// const funcao = function (){
+//   return "minha funcao"
+// }
+// const arrowFuncao = ()=> "Minha Arrow funcao"
+
+
+// console.log(arrowFuncao());
+
+
+
+
+
+// const aluno = { nome: "Bruno", idade: 20, turma: "T-22", ano: 2025 }
+
+// const {idade, turma, ...rrrr} = aluno
+
+// const novoAluno = {...aluno, novaTurma:"REact"}
+
+// console.log(novoAluno);
+
+
+
+
+// const meuArrya = [1,2,3,4,5]
+
+// const [_, __, nume3] = meuArrya
+
+
+// console.log(nume3);
+
+
+
+
+
+
+
+
+
+// function some2numero(num1, num2, callback) {
+
+//   const resultado = num1 + num2;
+
+//   return callback(resultado, 5)
+// }
+
+
+// const resultado = some2numero(1, 2, (num1, num2)=> num1 + num2 );
+
+
+// console.log(resultado);
 
 
 
