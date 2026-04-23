@@ -9,7 +9,7 @@ function Nome() {
 
 useEffect(()=>{
     alert("Ola")
-}, [nome, idade])
+}, [nome])
 
 
     // useEffect(()=>{

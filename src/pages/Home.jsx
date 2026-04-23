@@ -6,9 +6,8 @@ function Home() {
 
   return (
     <div>
-      <NavBar/>
-      <CarouselAnuncios/>
-      <ListaProdutos/>
+
+<h1>HOME</h1>      <CarouselAnuncios/>
     </div>
   );
 }
