@@ -1,19 +1,31 @@
 
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
-var num1 =10 
-var num2 =5 
-var num3 =10
+const nomeArray = array.map((valorLoop) => {
+  return valorLoop + 5
+})
 
 
-function soma(num1, num2){
-
-  return num1 + num2
-}
-var result = soma(num1, num2)
+console.log(nomeArray);
+;
 
 
-console.log(result);
+
+
+// var num1 =10 
+// var num2 =5 
+// var num3 =10
+
+
+// function soma(num1, num2){
+
+//   return num1 + num2
+// }
+// var result = soma(num1, num2)
+
+
+// console.log(result);
 
 
 // const funcao = function (){
