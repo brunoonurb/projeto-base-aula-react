@@ -9,12 +9,12 @@ function GerenciarLogin()
   const [emailUsuario, setEmailUsuario] = useState(null);
 
   const [numeroProdutosCarrinho, setNumeroProdutosCarrinho] = useState(0);
-  const { listaProdutosCarrinho } = useContext(CarrinhoContext);
+  // const { listaProdutosCarrinho } = useContext(CarrinhoContext);
 
-  useEffect(() => {
-    const quantidadeProdutos = listaProdutosCarrinho.length;
-    setNumeroProdutosCarrinho(quantidadeProdutos);
-  }, [listaProdutosCarrinho]);
+  // useEffect(() => {
+  //   const quantidadeProdutos = listaProdutosCarrinho.length;
+  //   setNumeroProdutosCarrinho(quantidadeProdutos);
+  // }, [listaProdutosCarrinho]);
 
   useEffect(() => {
     pegarDadosLocalStorage();
