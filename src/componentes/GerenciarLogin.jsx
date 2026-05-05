@@ -1,20 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import { Badge, Button, Col, Row } from "react-bootstrap";
 import { CarrinhoContext } from "../hooks/CarrinhoContext";
+import { ContextApagador } from "../hooks/TesteContext";
+import { ContextCarrinho } from "../hooks/TesteCarrinho";
 
-function GerenciarLogin() 
-{
+function GerenciarLogin() {
   const [token, setToken] = useState(null);
   const [nomeUsario, setNomeUsario] = useState(null);
   const [emailUsuario, setEmailUsuario] = useState(null);
 
   const [numeroProdutosCarrinho, setNumeroProdutosCarrinho] = useState(0);
-  // const { listaProdutosCarrinho } = useContext(CarrinhoContext);
 
-  // useEffect(() => {
-  //   const quantidadeProdutos = listaProdutosCarrinho.length;
-  //   setNumeroProdutosCarrinho(quantidadeProdutos);
-  // }, [listaProdutosCarrinho]);
+
+  const { listaProdutos } = useContext(ContextCarrinho)
 
   useEffect(() => {
     pegarDadosLocalStorage();
@@ -50,7 +48,7 @@ function GerenciarLogin()
 
   return (
     <Row>
-       <Col md={2}>
+      <Col md={2}>
         <a href="/carrinho">
           <Badge
             style={{
@@ -60,7 +58,7 @@ function GerenciarLogin()
             }}
             bg="success"
           >
-            {numeroProdutosCarrinho}
+            {listaProdutos.length}
           </Badge>
           <i className="fa fa-shopping-cart fa-2x"> </i>
         </a>

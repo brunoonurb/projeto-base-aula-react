@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import api from "../_service/api";
+import { ContextCarrinho } from "../hooks/TesteCarrinho";
 
 
 function MeuListarProdutos() {
@@ -8,9 +9,12 @@ function MeuListarProdutos() {
   const [produtos, setProdutos] = useState([])
 
 
+  const { adicionarCarrinho } = useContext(ContextCarrinho)
+
 
   async function buscarProdutos() {
 
+    
     console.log('buscarProdutos');
     try {
       // axios.get("http://webapp353621.ip-45-79-142-173.cloudezapp.io/api/productlistbyremark/home")
@@ -44,6 +48,8 @@ function MeuListarProdutos() {
               <p> {produto.title}  </p>
               <p> {produto.price}  </p>
               <img src={produto.image} width={100} />
+
+              <button onClick={()=> adicionarCarrinho(produto)}>Adiconar Carrinho</button>
             </Col>
             )
           })}

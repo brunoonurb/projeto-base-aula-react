@@ -1,18 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Button, Col, Row, Table } from "react-bootstrap";
-import { CarrinhoContext } from "../hooks/CarrinhoContext";
 import NavBar from "../componentes/NavBar";
+import { ContextCarrinho } from "../hooks/TesteCarrinho";
 
 function Carrinho() {
-  const { listaProdutosCarrinho, removerProduto } = useContext(CarrinhoContext);
-  const [produtosCarrinho, setProdutosCarrinho] = useState([]);
+  const { listaProdutos, removerProduto } = useContext(ContextCarrinho);
 
-  useEffect(() => {
-    console.log("BUSCAR CAAAR", listaProdutosCarrinho);
-    if (listaProdutosCarrinho) {
-      setProdutosCarrinho(listaProdutosCarrinho);
-    }
-  }, [listaProdutosCarrinho]);
 
   return (
     <>
@@ -35,18 +28,16 @@ function Carrinho() {
                 </tr>
               </thead>
               <tbody>
-                {produtosCarrinho.map((produtoCarrinho, index) => {
+                {listaProdutos?.map((produtoCarrinho, index) => {
                   return (
                     <tr>
-                      <td> {produtoCarrinho.idProduto}</td>
-                      <td> {produtoCarrinho.nomeProduto}</td>
-                      <td> {produtoCarrinho.descricaoProduto}</td>
-                      <td> {produtoCarrinho.precoProduto} R$</td>
+                      <td> {produtoCarrinho.id}</td>
+                      <td> {produtoCarrinho.title}</td>
+                      <td> {produtoCarrinho.category}</td>
+                      <td> {produtoCarrinho.price} R$</td>
                       <td>
                         <Button
-                          onClick={() =>
-                            removerProduto(produtoCarrinho.idProduto)
-                          }
+                          onClick={() => removerProduto(produtoCarrinho.id)}
                           variant="danger"
                         >
                           Remover
